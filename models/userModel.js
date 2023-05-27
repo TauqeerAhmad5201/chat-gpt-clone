@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bycrypt");
+const bcrypt = require("bcryptjs");
 const JWT = require("jsonwebtoken");
 const cookie = require("cookie");
 
