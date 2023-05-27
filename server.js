@@ -6,6 +6,9 @@ const colors = require('colors')
 const dotenv = require('dotenv')
 const connectDB = require("./config/db")
 
+//routes path 
+const authRoutes = require('./routes/authRoutes')
+
 //rest object 
 const app = express()
 
@@ -22,6 +25,9 @@ connectDB();
 dotenv.config()
 const PORT = process.env.PORT || 8080
 const DEV_MODE = process.env.DEV_MODE
+
+// API routes 
+app.use("/api/v1/auth", authRoutes);
 
 //listen server 
 app.listen(PORT, ()=>{
