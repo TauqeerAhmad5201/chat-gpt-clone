@@ -8,13 +8,12 @@ import Login from './pages/Login'
 function App() {
   return (
     <div>
-      <Navbar>
-        <Routes>
+      <Navbar/>
+      <Routes>
           <Route path="/" element={<Homepage/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
         </Routes>
-      </Navbar>
     </div>
   );
 }
